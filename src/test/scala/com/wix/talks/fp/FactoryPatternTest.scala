@@ -6,18 +6,18 @@ class FactoryPatternTest extends SpecificationWithJUnit{
   
   "factory pattern" should {
     "object oriented usage" in {
-      val animal = AnimalFactory.get("dog")
-      animal.noise must beEqualTo("bark")
+      val dog: Animal = AnimalFactory.get("dog")
+      dog.noise must beEqualTo("bark")
 
-      val anotherAnimal = AnimalFactory.get("cat")
-      anotherAnimal.noise must beEqualTo("miyaoo")
+      val cat: Animal = AnimalFactory.get("cat")
+      cat.noise must beEqualTo("miyaoo")
     }
     "fp oriented usage" in {
-      val animal = AnimalFactoryFP("dog")
-      animal.noise must beEqualTo("bark")
+      val dog: Animal = AnimalFactoryFP("dog")
+      dog.noise must beEqualTo("bark")
 
-      val anotherAnimal = AnimalFactoryFP("cat")
-      anotherAnimal.noise must beEqualTo("miyaoo")
+      val cat: Animal = AnimalFactoryFP("cat")
+      cat.noise must beEqualTo("miyaoo")
     }
   }
 
