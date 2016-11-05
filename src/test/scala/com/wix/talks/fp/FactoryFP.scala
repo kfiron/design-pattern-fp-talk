@@ -3,14 +3,14 @@ package com.wix.talks.fp
 
 object FactoryFP extends App{
 
-  val dog = AnimalFactory.get("Dog")
-  println(s"I am a $dog")
+  val dog = AnimalFactoryFp("Dog")
+  println(s"$dog speak ${dog.speak}")
 
-  val cat = AnimalFactory.get("Cat")
-  println(s"I am a $cat")
+  val cat = AnimalFactoryFp("Cat")
+  println(s"$cat speak ${cat.speak}")
 
-  val cow = AnimalFactory.get("Cow")
-  println(s"I am a $cow")
+  val cow = AnimalFactoryFp("Cow")
+  println(s"$cow speak ${cow.speak}")
   
 }
 

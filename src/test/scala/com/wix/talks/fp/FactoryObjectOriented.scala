@@ -3,14 +3,13 @@ package com.wix.talks.fp
 object FactoryObjectOriented extends App{
 
   val dog = AnimalFactory.get("Dog")
-  println(s"I am a $dog")
+  println(s"$dog speak ${dog.speak}")
 
   val cat = AnimalFactory.get("Cat")
-  println(s"I am a $cat")
+  println(s"$cat speak ${cat.speak}")
 
   val cow = AnimalFactory.get("Cow")
-  println(s"I am a $cow")
-  
+  println(s"$cow speak ${cow.speak}")
 }
 
 object AnimalFactory {
@@ -26,9 +25,18 @@ object AnimalFactory {
   
 }
 
-trait Animal
-case class Dog() extends Animal
-case class Cat() extends Animal
-case class Cow() extends Animal
+trait Animal {
+  def speak: String
+  
+}
+case class Dog() extends Animal {
+  override def speak: String = "Buff"
+}
+case class Cat() extends Animal {
+  override def speak: String = "Miyaoo"
+}
+case class Cow() extends Animal{
+  override def speak: String = "Moo"
+}
 
 case class UnknownAnimalException() extends RuntimeException
