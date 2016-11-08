@@ -1,4 +1,4 @@
-package com.wix.talks.fp
+package com.wix.talks.cake
 
 import java.util.UUID
 

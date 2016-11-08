@@ -1,6 +1,12 @@
 package com.wix.talks.fp
 
 
+import com.wix.talks.oo._
+import com.wix.talks.oo.Cow
+import com.wix.talks.oo.Dog
+import com.wix.talks.oo.Cat
+
+
 object FactoryFP extends App{
 
   val dog = AnimalFactoryFp("Dog")

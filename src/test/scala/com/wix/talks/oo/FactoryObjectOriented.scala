@@ -1,4 +1,4 @@
-package com.wix.talks.fp
+package com.wix.talks.oo
 
 object FactoryObjectOriented extends App{
 

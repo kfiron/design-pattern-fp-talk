@@ -1,5 +1,8 @@
 package com.wix.talks.fp
 
+import com.wix.talks.oo._
+
+
 object BuilderFp extends App{
 
   val pizza = Pizza2(name = "Putaneska", 
